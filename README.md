@@ -1,2 +1,2 @@
 # picosh
-A low-quality shell written in python, for the Rasberry py Pico
+A low-quality terminal program written in python, for the Rasberry py Pico
