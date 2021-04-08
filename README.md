@@ -6,3 +6,8 @@ Until this is confirmed to work on the pico, all code here is designed to run on
 
 1. download the latest verison from master
 2. run `picosh.py` from a terminal using your prefered method
+
+##### Roadmap
+1. implement the rest of the path system and the rest of cbam
+2. make sure this all works on a pico
+3. potentially implement some bash-style functions (don't hold your breath)
