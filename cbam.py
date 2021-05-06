@@ -20,7 +20,10 @@ def install(package_name):
         path = load_path()
         path.append(package_name)
         save_path(path)
+        with open("linker.py","a+") as f:
+            f.write("import " + package_name)
         print(package_name + " insalled")
+        print("please restart your system to apply changes")
     else:
         pass
 def uninstall(package_name):
@@ -28,6 +31,18 @@ def uninstall(package_name):
         path = load_path()
         path.remove(package_name)
         save_path(path)
+        with open("linker.py","r") as f:
+                linker_current = f.read()
+                linker_current = linker_current.split("\n)
+                for i in linker_current:
+                    if package_name in linker_current:
+                                index = linker_current.index(package_name)
+                                linker_current.remove(index)
+                    else:
+                        pass
+                    for i in linker_current:
+                        f.write("import " + i)
+        print("please restart your system to apply changes")
     else:
         pass
 def help():

@@ -1,3 +1,3 @@
 import cbam
 def lost():
-   cbam.help()
+   cbam.uninstall("cock")
